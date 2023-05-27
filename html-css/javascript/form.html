@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JavaCript 5</title>
+    <script type="text/javascript">
+        function validasi() {
+            var nim = document.form.nim.value;
+            var nama = document.form.nama.value;
+            var agama = document.form.agama.value;
+            var alamat = document.form.alamat.value;
+            if (nim =='') {
+                alert("No. Induk Mahasiswa Harus diisi");
+                return false;
+            } else if (nama == '') {
+                alert("Nama Harus diisi");
+            } else if (agama == 0) {
+                alert("Agama Harus di Pilih");
+                return false;
+            } else if (alamat == '') {
+                alert("Alamat harus diisi");
+                return false;
+            }else{
+                alert("Nim : "+ nim + "\n" + "Nama Mahasiswa : " + nama + "\n" + "Agama : " + agama + "\n" + "Alamat : " + alamat);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" id="form" name="form" onsubmit="return validasi()">
+        <table align="center" width="30%">
+            <tr>
+                <td width="120">NIM</td>
+                <td width="5">:</td>
+                <td><input type="text" id='nim' nama='nim'></td>
+            </tr>
+            <tr>
+                <td>Nama Mahasiwa</td>
+                <td>:</td>
+                <td><input type="text" id='nama' name='nama'></td>
+            </tr>
+            
+            <tr>
+                <td>Agama</td>
+                <td>:</td>
+                <td>
+                <select id="agama" name="agama">
+                    <option value="0" selected> -pilih-</option>
+                    <option value="I">Islam</option>
+                    <option value="P">Protestan</option>
+                    <option value="K">K. Katolik</option>
+                    <option value="W">Wahyudi</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>:</td>
+                <td><textarea id='alamat' name='alamat'></textarea></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Proses">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

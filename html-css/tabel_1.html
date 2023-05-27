@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan CSS Tabel</title>
+    <!-- Internal CSS -->
+    <style>
+        .tbl_1{
+            font-family: serif;
+            color: black;
+            border-collapse: collapse;
+            width: 50%;
+            border: 1px solid #d8e8f3;
+        }
+
+        /* Background Header */
+        .tbl_1 tr th {
+            background: #86cae7;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        /* Jarak Data Header Data Tabel */
+        .tbl_1 th,
+        td {
+            padding: 8px 20px;
+            text-align: center;
+        }
+        /* Ketika Data di Sorot */
+        .tbl_1 tr:hover {
+            background-color: rgb(194, 194, 194);
+        }
+        /* Penentuan Warna row data kedua */
+        .tbl_1 tr:nth-child(even) {
+            border-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+<body>
+    <table class="tbl_1">
+        <!-- Header -->
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>Usia</th>
+        </tr>
+        <!-- Data Tabel -->
+        <tr>
+            <td>1</td>
+            <td>Zulfikhar Hadju</td>
+            <td>Isekai</td>
+            <td>22 Tahun</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Fiqriawan</td>
+            <td>Isekai</td>
+            <td>20 Tahun</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Tian Kalalo</td>
+            <td>Isekai</td>
+            <td>30 Tahun</td>
+        </tr>
+    </table>
+</body>
+</html>
